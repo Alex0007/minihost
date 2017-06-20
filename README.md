@@ -39,9 +39,9 @@ Public wildcard domain names that resolves to `127.0.0.1` are also supported and
 http://one.til.io:2000
 http://two.til.io:2000
 
-# See xip.io
-http://one.127.0.0.1.xip.io:2000
-http://two.127.0.0.1.xip.io:2000
+# See nip.io
+http://one.127.0.0.1.nip.io:2000
+http://two.127.0.0.1.nip.io:2000
 ```
 
 To set a custom name, add `-n`:

@@ -63,7 +63,7 @@ describe('h', function () {
     it('should be possible to make simple HTTP requests', function (done) {
       request
         .get('/')
-        .set('Host', 'one.127.0.0.1.xip.io')
+        .set('Host', 'one.127.0.0.1.nip.io')
         .expect('OK')
         .end(done)
     })
@@ -71,7 +71,7 @@ describe('h', function () {
     it('should be possible to make complex HTTP requests', function (done) {
       request
         .get('/some/path?msg=hello')
-        .set('Host', 'one.127.0.0.1.xip.io')
+        .set('Host', 'one.127.0.0.1.nip.io')
         .expect('hello')
         .end(done)
     })
@@ -82,7 +82,7 @@ describe('h', function () {
           done()
           socket.close()
         })
-        .connect('ws://one.127.0.0.1.xip.io:2000', 'echo-protocol')
+        .connect('ws://one.127.0.0.1.nip.io:2000', 'echo-protocol')
     })
   })
 
@@ -95,7 +95,7 @@ describe('h', function () {
     it('should make the server available under another name', function (done) {
       request
         .get('/')
-        .set('Host', 'two.127.0.0.1.xip.io')
+        .set('Host', 'two.127.0.0.1.nip.io')
         .expect('OK')
         .end(done)
     })
@@ -110,7 +110,7 @@ describe('h', function () {
     it('should make the server available under another name', function (done) {
       request
         .get('/')
-        .set('Host', 'some.127.0.0.1.xip.io')
+        .set('Host', 'some.127.0.0.1.nip.io')
         .expect('OK')
         .end(done)
     })
@@ -125,7 +125,7 @@ describe('h', function () {
     it('should make the server available under another name - one', function (done) {
       request
         .get('/')
-        .set('Host', 'one.127.0.0.1.xip.io')
+        .set('Host', 'one.127.0.0.1.nip.io')
         .expect('OK')
         .end(done)
     })
@@ -133,7 +133,7 @@ describe('h', function () {
     it('should make the server available under another name - two', function (done) {
       request
         .get('/')
-        .set('Host', 'two.127.0.0.1.xip.io')
+        .set('Host', 'two.127.0.0.1.nip.io')
         .expect('OK')
         .end(done)
     })
@@ -148,7 +148,7 @@ describe('h', function () {
     it('should replace $PORT', function (done) {
       request
         .get('/')
-        .set('Host', 'three.127.0.0.1.xip.io')
+        .set('Host', 'three.127.0.0.1.nip.io')
         .expect(/OK/)
         .end(done)
     })
